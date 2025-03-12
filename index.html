@@ -15,12 +15,138 @@
 <body>
   <button id="modalOpen" class="button">Открыть</button>
 
-  <div class="modal">
+  <div class="modal" style="display: block;">
     <div class="modal__content">
       <div class="modal__header">
         <h1 class="modal__title">Калькулятор</h1>
         <button class="modal__close"></button>
+      </div>
 
+      <div class="modal__body">
+
+        <div class="modal__add-product">
+          <h2 class="modal__subtitle"><span class="accent-color">Шаг 1</span> Добавьте товары или выберите заказ</h2>
+          <div class="modal__combobox">
+            <label for="choiceOrder" class="modal__label">Выберите заказ</label>
+            <input type="text" placeholder="Начните вводить номер заказа" id="choiceOrder" class="modal__input">
+          </div>
+          <div class="modal__products"></div>
+          <button class="modal__add" id="productAdd">Добавить товар</button>
+        </div>
+
+        <div class="modal__result-counting">
+          <h2 class="modal__subtitle">Результат подсчета</h2>
+          <div class="modal__params">
+            <label for="weight" class="modal__param">
+              Общий вес
+              <input type="text" class="modal__input" id="weight" disabled>
+            </label>
+
+            <label for="volume" class="modal__param">
+              Общий объем
+              <input type="text" class="modal__input" id="volume" disabled>
+            </label>
+
+            <label for="density" class="modal__param">
+              Плотность товаров
+              <input type="text" class="modal__input" id="density" disabled>
+            </label>
+
+            <label for="price" class="modal__param">
+              Стоимость товаров, $
+              <input type="text" class="modal__input" id="price" disabled>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal__package">
+          <div class="modal__package-header">
+            <h2 class="modal__subtitle"><span class="accent-color">Шаг 2</span> Укажите упаковку</h2>
+            <div class="modal__advice">Совет: используйте <span class="accent-color">Обрешетку</span></div>
+          </div>
+          <div class="modal__combobox">
+            <input type="text" placeholder="Выберите упаковку" id="choiceOrder" class="modal__input">
+          </div>
+          <div class="modal__packaging">
+            <div class="modal__package-type">Пупырка</div>
+            <div class="modal__package-type">Паллета</div>
+          </div>
+        </div>
+
+        <div class="modal__result-counting">
+          <h2 class="modal__subtitle">Перерасчет с учётом упаковки</h2>
+          <div class="modal__params">
+            <label for="totalWeight" class="modal__param">
+              Итого вес
+              <input type="text" class="modal__input" id="totalWeight" disabled>
+            </label>
+
+            <label for="totalVolume" class="modal__param">
+              Итого объем
+              <input type="text" class="modal__input" id="totalVolume" disabled>
+            </label>
+
+            <label for="totaldProtucts" class="modal__param">
+              Итого товаров
+              <input type="text" class="modal__input" id="totaldProtucts" disabled>
+            </label>
+
+            <label for="insurance" class="modal__param">
+              Страховка, %
+              <input type="text" class="modal__input" id="insurance" disabled>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal__detalization">
+          <h2 class="modal__subtitle">Детализация предварительного расчёта стоимости перевозки</h2>
+          <table class="modal__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>10-15 дней</th>
+                <th>18-25 дней</th>
+                <th>20-30 дней</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ставка за кг</td>
+                <td>2.2$</td>
+                <td>2.2$</td>
+                <td>2.2$</td>
+              </tr>
+              <tr>
+                <td>Стоимость доставки</td>
+                <td>200.2$</td>
+                <td>200.2$</td>
+                <td>200.2$</td>
+              </tr>
+              <tr>
+                <td>Упаковка</td>
+                <td>68$</td>
+                <td>68$</td>
+                <td>68$</td>
+              </tr>
+              <tr>
+                <td>Разгрузка</td>
+                <td>72$</td>
+                <td>72$</td>
+                <td>72$</td>
+              </tr>
+              <tr>
+                <td>Страховка</td>
+                <td>60$</td>
+                <td>60$</td>
+                <td>60$</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="modal__footer">
+        <button class="button">Сохранить расчет</button>
       </div>
     </div>
   </div>

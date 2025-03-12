@@ -1,15 +1,11 @@
-$(document).ready(function ($) {
-
+$.when($.ready).then(function () {
   $('#modalOpen').on('click', () => {
     $('.modal').fadeIn();
   })
 
-  $('.modal').on('click', () => {
-    $('.modal').fadeOut();
+  $('.modal, .modal__close').on('click', (event) => {
+    if ($(event.target).is('.modal, .modal__close')) $('.modal').fadeOut();
   });
 
-  $('.modal__close').on('click', () => {
-    $('.modal').fadeOut();
-  });
 })
 
