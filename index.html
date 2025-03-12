@@ -64,13 +64,28 @@
             <h2 class="modal__subtitle"><span class="accent-color">Шаг 2</span> Укажите упаковку</h2>
             <div class="modal__advice">Совет: используйте <span class="accent-color">Обрешетку</span></div>
           </div>
-          <div class="modal__combobox">
-            <input type="text" placeholder="Выберите упаковку" id="choiceOrder" class="modal__input">
+
+          <div class="custom-select">
+            <div class="custom-select__select-box" id="select-box">Выберите упаковку</div>
+            <div class="custom-select__options">
+              <label class="custom-select__option">
+                <input type="checkbox" value="Пупырка">
+                Пупырка
+                <span>620$ / мешок</span>
+              </label>
+              <label class="custom-select__option">
+                <input type="checkbox" value="Паллета">
+                Паллета
+                <span>620$ / шт</span>
+              </label>
+              <label class="custom-select__option">
+                <input type="checkbox" value="Фанера">
+                Фанера
+                <span>620$ / шт</span>
+              </label>
+            </div>
           </div>
-          <div class="modal__packaging">
-            <div class="modal__package-type">Пупырка</div>
-            <div class="modal__package-type">Паллета</div>
-          </div>
+          <div class="selected-packages"></div>
         </div>
 
         <div class="modal__result-counting">
@@ -150,7 +165,8 @@
       </div>
     </div>
   </div>
-  <script type="module" src="/src/modal.js"></script>
+  <script type="module" src="/src/scripts/modal.js"></script>
+  <script type="module" src="/src/scripts/custom-select.js"></script>
 </body>
 
 </html>

@@ -208,29 +208,6 @@
     gap: 12px;
   }
 
-  &__package-type {
-    display: flex;
-    gap: 13px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 11px 16px;
-
-    border-radius: 40px;
-    background-color: #6f83f51c;
-
-    font-weight: 500;
-    font-size: 14px;
-    color: #5b4ccf;
-
-    &::after {
-      content: url("data:image/svg+xml,%3Csvg viewBox='-0.5 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M3 21.32L21 3.32001' stroke='%235B4CCF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3Cpath d='M3 3.32001L21 21.32' stroke='%235B4CCF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
-
-      display: block;
-      height: 14px;
-      width: 14px;
-    }
-  }
-
   &__detalization {
     padding-top: 16px;
 
