@@ -24,6 +24,11 @@
     font-weight: 400;
     font-size: 12px;
     color: #292929cc;
+
+    &:has(input[type='checkbox']) {
+      flex-direction: row;
+      gap: 9px;
+    }
   }
 
   &__name {
@@ -36,5 +41,50 @@
     font-weight: 400;
     font-size: 14px;
     color: #3d3d3d;
+  }
+
+  &__clue {
+    margin-bottom: 24px;
+  }
+
+  &__data {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #292929cc;
+
+    input {
+      max-width: 140px;
+      padding: 11px 16px;
+      border: 1px solid #363c5f33;
+      border-radius: 40px;
+    }
+
+    div {
+      margin-bottom: 13px;
+    }
+
+    &-title {
+      margin-bottom: 11px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: #3d3d3d;
+    }
+  }
+
+  &__input {
+    width: 70%;
+    margin-bottom: 16px;
+    padding: 11px 16px;
+    border: 1px solid #363c5f33;
+    border-radius: 40px;
   }
 }

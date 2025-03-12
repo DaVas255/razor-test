@@ -5,7 +5,7 @@ function calculateTotalVolume() {
   $('.product-volume').each(function () {
     totalVolume += parseFloat($(this).val()) || 0;
   });
-  $('#totalVolume').val(totalVolume);
+  $('#volume').val(totalVolume);
 }
 
 function calculateVolume(productId) {
@@ -25,18 +25,27 @@ $('#productAdd').on('click', function () {
                         <label>
                           Название товара
                           <input placeholder="Название товара" class="product__name"/>
-                          <div class="product__">Скорее всего, это <span class="accent-color">линия "Одежда"</span></div>
+                          <div class="product__clue">Скорее всего, это <span class="accent-color">линия "Одежда"</span></div>
                         </label>
-                        <label>Длина: <input type="number" id="length-${productCount}" class="dimension"></label>
-                        <label>Ширина: <input type="number" id="width-${productCount}" class="dimension"></label>
-                        <label>Высота: <input type="number" id="height-${productCount}" class="dimension"></label>
-                        <label>Объем: <input type="text" id="volume-${productCount}" class="product-volume" disabled></label>
+                        <h3 class="product__data-title">Введите транспортировочные данные</h3>
+                        <div class="product__data">
+                          <label>Длина, см <input type="number" id="length-${productCount}" class="product__dimension" placeholder="Длина"></label>
+                          <label>Ширина, см <input type="number" id="width-${productCount}" class="product__dimension" placeholder="Ширина"></label>
+                          <label>Высота, см <input type="number" id="height-${productCount}" class="product__dimension" placeholder="Высота"></label>
+                          <div>или</div>
+                          <label>Введите объем <input type="text" id="volume-${productCount}" class="product-volume" placeholder="Объем" disabled></label>
+                        </div>
+                        <label>Вес коробки, кг <input type="number" class="product__input" placeholder="Введите вес коробки"></label>
+                        <label>Кол-во коробок, шт <input type="number" class="product__input" placeholder="Введите кол-во коробок"></label>
+                        <label>Стоимость товара, $ <input type="number" class="product__input" placeholder="Введите общую стоимость всего товара"></label>
+                        <label><input type="checkbox"> Хрупкий товар</label>
+
                     </div>`;
 
   $('#productList').append(productHTML);
 });
 
-$(document).on('input', '.dimension', function () {
+$(document).on('input', '.product__dimension', function () {
   let productId = $(this).attr('id').split('-')[1];
   calculateVolume(productId);
 });
